@@ -1,0 +1,39 @@
+package com.Mohamed.jwtAauthentification.exception;
+
+public enum ErrorCodes {
+    UTILISATEUR_NOT_FOUND(12000),
+    UTILISATEUR_NOT_VALID(12001),
+    UTILISATEUR_ALREADY_EXISTS(12002),
+
+    DEPARTMENT_NOT_FOUND(15000),
+    DEPARTMENT_NOT_VALID(15001),
+    DEPARTMENT_ALREADY_EXISTS(15002),
+    DEPARTEMENT_FULL(15003),
+    DEPARTEMENT_ALREADY_IN_USE(15004),
+
+    EMPLACEMENT_NOT_FOUND(16000),
+    EMPLACEMENT_NOT_VALID(16001),
+    EMPLACEMENT_ALREADY_EXISTS(16002),
+
+    MATERIEL_NOT_VALID(17000),
+    MATERIEL_NOT_FOUND(17001),
+    MATERIEL_SERIES_ALREADY_EXISTS(17002),
+
+    DEMANDE_NOT_VALID(18000),
+    DEMANDE_NOT_FOUND(18001),
+
+    UTILISATEUR_CHANGE_PASSWORD_OBJECT_NOT_VALID(19000)
+
+
+
+            ;
+    private int code;
+
+    ErrorCodes(int code) {
+        this.code = code;
+    }
+
+    public int getCode() {
+        return code;
+    }
+}

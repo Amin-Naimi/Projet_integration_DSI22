@@ -1,0 +1,102 @@
+
+
+<section class="ftco-section">
+    <div class="container">
+              
+                        
+        <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title m-b-0"><i class="bi bi-tools"></i> Les materiel </h5>
+                    <div class="search">
+                        <input type="text" class="search-input" placeholder="Chercher..." name="">
+                        <a href="#" class="search-icon">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+                    <div class="table-responsive">
+                        <div style="height: 430px; overflow-y: auto;">
+                        <table class="table">
+                            <thead class="thead-light">
+                                <tr> <th scope="col">ID</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Quantité</th>
+                                    <th scope="col">Coute</th>
+                                    <th scope="col">Departement</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="customtable">
+                                <tr>
+                                    <td>1</td>
+                                    <td>chayma saidani</td>
+                                    <td>58767128</td>
+                                    <td>1451772</td>
+                                    <td>chaymasdn28@gmail.com</td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModalM">
+                                                <i class="bi bi-pencil-square"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                                        </div>
+                                    </td>                                    
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="editModalM" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Modifier les informations de materiel</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Form for editing user information -->
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nom </label>
+                        <input type="text" class="form-control" id="name" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Quantité">Quantité</label>
+                        <input type="number" class="form-control" id="Quantité" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Coute">Coute</label>
+                        <input type="number" class="form-control" id="Coute" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Departement</label>
+                        <input type="text" class="form-control" id="department" value="Technologie de l'informatique">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+       </div> 
+        
+
+</section>
+
+

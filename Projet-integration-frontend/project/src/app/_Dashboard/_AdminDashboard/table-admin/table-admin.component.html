@@ -1,0 +1,104 @@
+<section class="ftco-section">
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title m-b-0"><i class="bi bi-shield-lock-fill"></i> Les {{origin}} </h5>
+            <div class="search">
+              <input type="text" class="search-input" placeholder="Chercher..." name="">
+              <a href="#" class="search-icon">
+                <i class="fa fa-search"></i>
+              </a>
+            </div>
+          </div>
+          <div class="table-responsive" *ngIf="users!=null">
+            <div style="height: 430px; overflow-y: auto;">
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nom et Prenom</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col">Cin</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody class="customtable" *ngFor="let user of users">
+                  <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.nom}} {{user.prenom}}</td>
+                    <td>{{user.numTel}}</td>
+                    <td>{{user.numCin}}</td>
+                    <td>{{user.email}}</td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-secondary"
+                           (click)="modifierAdmin(user.id)">
+                          <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="editModalLabel">Modifier les informations de l'utilisateur</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <!-- Form for editing user information -->
+                      <form>
+                        <div class="form-group">
+                          <label for="name">Nom </label>
+                          <input type="text" class="form-control" id="name" value="chayma">
+                        </div>
+                        <div class="form-group">
+                          <label for="Prenom">Prenom </label>
+                          <input type="text" class="form-control" id="name" value="Saidani">
+                        </div>
+                        <div class="form-group">
+                          <label for="phone">Telephone</label>
+                          <input type="tel" class="form-control" id="phone" value="58767128">
+                        </div>
+                        <div class="form-group">
+                          <label for="cin">Cin</label>
+                          <input type="text" class="form-control" id="cin" value="1451772">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">E-mail</label>
+                          <input type="email" class="form-control" id="email" value="1chaymasdn28@gmail.com">
+                        </div>
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                      <button type="button" class="btn btn-primary">Enregistrer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
